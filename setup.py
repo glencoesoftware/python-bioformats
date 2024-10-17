@@ -14,7 +14,7 @@ setuptools.setup(
     description="Read and write life sciences file formats",
     extras_require={
         "test": [
-            "pytest>=3.3.2,<4"
+            "pytest>=6.1"
         ]
     },
     install_requires=[
