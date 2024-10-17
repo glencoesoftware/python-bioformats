@@ -6,7 +6,6 @@ setuptools.setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
-        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "Programming Language :: Java",
         "Topic :: Scientific/Engineering :: Bio-Informatics",
@@ -42,5 +41,5 @@ setuptools.setup(
         "bioformats"
     ],
     url="http://github.com/CellProfiler/python-bioformats/",
-    version="4.1.0"
+    version="4.1.10001"
 )

@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        architecture: x64
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip setuptools build numpy
+        pip install .[test]
+    - name: Run tests
+      run: pytest
+    - name: Build wheel
+      run: python -m build --wheel
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        path: dist/*.whl
+
+
