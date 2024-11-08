@@ -24,7 +24,7 @@ from . import formatwriter as _formatwriter
 
 _jars_dir = os.path.join(os.path.dirname(__file__), 'jars')
 
-JAR_VERSION = '6.5.1'
+JAR_VERSION = '7.3.1'
 
 JARS = javabridge.JARS + [os.path.realpath(os.path.join(_jars_dir, name + '.jar'))
                           for name in ['bioformats_package']]
